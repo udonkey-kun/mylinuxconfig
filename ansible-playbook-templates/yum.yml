@@ -1,0 +1,14 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Installing/Verifying several packages
+    yum:
+      name: |
+              vim,
+              tcpdump
+
+      state: present
+      update_cache: true

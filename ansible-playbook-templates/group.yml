@@ -1,0 +1,11 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Ensure group "docker" exists with correct gid
+    group:
+      name: docker
+      state: present
+      #gid: 1750

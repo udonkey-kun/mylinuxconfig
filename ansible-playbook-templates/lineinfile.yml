@@ -1,0 +1,11 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+    - name: Ensure SELinux is set to enforcing mode
+      lineinfile:
+        path: /tmp/config
+        regexp: '^SELINUX='
+        line: SELINUX=enforcing

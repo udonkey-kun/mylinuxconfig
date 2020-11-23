@@ -1,0 +1,8 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Ping
+    ping:

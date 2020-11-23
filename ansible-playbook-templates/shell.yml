@@ -1,0 +1,8 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Copy file from local to remote
+    shell: wall -n "Ansible vient de se lancer!"

@@ -1,0 +1,12 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Changement permissions et owner
+    file:
+      path: /root/test.sh
+      owner: user
+      group: user
+      mode: '0644'

@@ -1,0 +1,13 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Copy file from local to remote
+    copy:
+      src: /etc/group
+      dest: /tmp/
+      owner: user
+      group: user
+      mode: '0644'

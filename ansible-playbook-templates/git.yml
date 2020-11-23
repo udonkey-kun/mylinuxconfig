@@ -1,0 +1,11 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Git checkout
+    git:
+      repo: 'https://github.com/git/git'
+      dest: /srv/checkout
+

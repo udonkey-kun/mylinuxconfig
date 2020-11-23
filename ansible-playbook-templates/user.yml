@@ -1,0 +1,13 @@
+---
+- name: Template
+  hosts: all
+  remote_user: root
+
+  tasks:
+  - name: Add or remove the user 'admin' with a bash shell, appending the group 'root' to the user's groups
+    user:
+      name: admin
+      shell: /bin/bash
+      groups: root
+      #state: absent
+      append: yes

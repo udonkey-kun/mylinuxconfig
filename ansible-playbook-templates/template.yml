@@ -1,0 +1,19 @@
+---
+- name: Template
+  hosts: all
+  vars:
+   VARIABLE_JINJA: "coucou"
+   region:
+     - nord
+     - centre
+     - sud
+  remote_user: root
+
+  tasks:
+  - name: Template
+    template:
+      src: /etc/ansible/playbooks/template.j2
+      dest: /tmp/template.conf
+      owner: user
+      group: user
+      mode: '0644'
