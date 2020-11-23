@@ -1,0 +1,14 @@
+[user]
+	name = Mehdi 
+	email = mehdi.bourmada@messagerie.d
+
+[color]
+	ui = true
+
+[alias]
+	st = status
+	pl = pull
+	ph = push
+
+[push]
+	default = simple
